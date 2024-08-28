@@ -8,7 +8,7 @@
  }
 
  .weather img {
-    display: none;
+    margin-top: -9rem;
  }
 
  .weather-app {
