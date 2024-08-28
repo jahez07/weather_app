@@ -4,7 +4,7 @@ import "./components/weatherApp.css"
 const App = () => {
   return (
     <div>
-      <WeatherApp />
+      <WeatherApp /> 
     </div>
   )
 }
