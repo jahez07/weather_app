@@ -28,3 +28,19 @@
     flex-direction: column ;
     row-gap:  1rem;
  }
+
+ .search-top {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+ }
+
+ .search-top i {
+    font-size: 2rem;
+    color: #2f2e57;
+ }
+
+ .search-top div {
+    font-size: 1.6rem;
+    color: #484569;
+ }
