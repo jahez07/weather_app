@@ -1,8 +1,8 @@
 
-const weatherApp = () => {
+const WeatherApp = () => {
   return (
     <div>weatherApp</div>
   )
 }
 
-export default weatherApp
+export default WeatherApp
