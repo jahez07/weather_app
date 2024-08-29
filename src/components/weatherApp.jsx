@@ -4,7 +4,12 @@ import rainy from "../assets/images/rainy.png"
 import snowy from "../assets/images/snowy.png"
 
 const WeatherApp = () => {
-    const api_key = 'a609c47b73edac793c78b384f7416322'
+    const api_key = 'f33a484cf794d08d0148764789aaba32'
+
+    const search = () => {
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=Dubai&units=Metric&appid=${api_key}`
+    }
+
   return (
     <div className="container">
         <div className="weather-app">
