@@ -22,13 +22,19 @@ const WeatherApp = () => {
     setLocation("");
   };
 
+  const handleKeyDown = (e) => {
+    if(e.key === "Enter"){
+        search()
+    }
+  }
+
   return (
     <div className="container">
       <div className="weather-app">
         <div className="search">
           <div className="search-top">
             <i className="fa-solid fa-location-dot"></i>
-            <div className="location">London</div>
+            <div className="location">{data.name}</div>
           </div>
           <div className="search-bar">
             <input
@@ -36,14 +42,15 @@ const WeatherApp = () => {
               placeholder="Enter Location"
               value={location}
               onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
             />
             <i className="fa-solid fa-magnifying-glass" onClick={search}></i>
           </div>
         </div>
         <div className="weather">
           <img src={sunny} alt="sunny" />
-          <div className="weather-type">Clear</div>
-          <div className="temp">28°</div>
+          <div className="weather-type">{data.weather ? data.weather[0].main : null}</div>
+          <div className="temp">{data.main? `${Math.floor(data.main.temp)}°` : null}</div>
         </div>
         <div className="weather-date">
           <p>Fri, 3 May</p>
