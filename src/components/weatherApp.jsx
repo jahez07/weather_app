@@ -150,7 +150,7 @@ const WeatherApp = () => {
                     <div className="temp">{data.main ? `${Math.floor(data.main.temp)}°` : null}</div>
                 </div>
                 <div className="weather-date">
-                    <p>Fri, 3 May</p>
+                    <p>{formattedDate}</p>
                 </div>
                 <div className="weather-data">
                     <div className="humidity">
