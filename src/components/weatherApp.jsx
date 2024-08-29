@@ -116,6 +116,7 @@ const WeatherApp = () => {
 
     const currentDate = new Date()
     const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    const months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
     return (
         <div className="container">
