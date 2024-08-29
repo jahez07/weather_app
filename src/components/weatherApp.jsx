@@ -4,6 +4,7 @@ import rainy from "../assets/images/rainy.png"
 import snowy from "../assets/images/snowy.png"
 
 const WeatherApp = () => {
+    const api_key = 'a609c47b73edac793c78b384f7416322'
   return (
     <div className="container">
         <div className="weather-app">
