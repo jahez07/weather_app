@@ -16,11 +16,13 @@ const WeatherApp = () => {
 
     useEffect(() => {
         const fetchDefaultWeather = async () => {
+            setLoading(true)
             const defaultLocation = "Dubai"
             const url = `https://api.openweathermap.org/data/2.5/weather?q=${defaultLocation}&units=Metric&appid=${api_key}`
             const res = await fetch(url)
             const defaultData = await res.json()
             setData(defaultData)
+            setLoading(false)
         }
         fetchDefaultWeather()
     }, [])
@@ -41,7 +43,7 @@ const WeatherApp = () => {
                 setData(searchData);
                 setLocation("");
             }
-
+            setLoading(false)    
         }
     };
 
@@ -105,7 +107,7 @@ const WeatherApp = () => {
                         <i className="fa-solid fa-magnifying-glass" onClick={search}></i>
                     </div>
                 </div>
-                {data.notFound ? (<div className="not-found">Incorrect City 🏙️ ☁️</div>) : <><div className="weather">
+                {loading ? (<img className="loader" src={loadingGif} alt="loading"/>) : data.notFound ? (<div className="not-found">Incorrect City 🏙️ ☁️</div>) : <><div className="weather">
                     <img src={weatherImage} alt="sunny" />
                     <div className="weather-type">{data.weather ? data.weather[0].main : null}</div>
                     <div className="temp">{data.main ? `${Math.floor(data.main.temp)}°` : null}</div>
