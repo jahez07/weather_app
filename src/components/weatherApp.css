@@ -42,6 +42,13 @@
     row-gap:  1rem;
  }
 
+ .not-found {
+     font-size: 2.5rem;
+     color: #484569;
+     margin-top: 8rem;
+     text-shadow: -.3rem .5rem 1rem rgba(0, 0, 0, .2);
+ }
+
  .search-top {
     display: flex;
     align-items: center;
