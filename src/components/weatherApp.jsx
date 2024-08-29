@@ -54,6 +54,8 @@ Remember to adjust your responses based on the specific input provided and consi
 const WeatherApp = () => {
     const [data, setData] = useState({});
     const [location, setLocation] = useState(" ");
+    const api_key = "f1c67c9a49dd257773513a865b558d9d";
+
 
     useEffect(() => {
         const fetchDefaultWeather = async () => {
@@ -111,6 +113,9 @@ const WeatherApp = () => {
     }
 
     const backgroundImage = data.weather ? backgroundImages[data.weather[0].main] : 'linear-gradient(to top, #f3b07c, #fcd283)'
+
+    const currentDate = new Date()
+    const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
     return (
         <div className="container">
