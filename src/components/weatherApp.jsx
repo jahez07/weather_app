@@ -5,7 +5,7 @@ import snowy from "../assets/images/snowy.png";
 import loadingGif from "../assets/images/loading.gif"
 import { useState, useEffect } from "react";
 
-
+const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY
 
 const WeatherApp = () => {
     const [data, setData] = useState({});
