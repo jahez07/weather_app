@@ -43,7 +43,7 @@ const WeatherApp = () => {
                 setData(searchData);
                 setLocation("");
             }
-            setLoading(false)    
+            setLoading(false)
         }
     };
 
@@ -58,11 +58,11 @@ const WeatherApp = () => {
                     message: `Provide a brief weather forecast summary for ${weatherData.name} based on the following data: Temperature: ${weatherData.main.temp}°C, Weather: ${weatherData.weather[0].main}, Humidity: ${weatherData.main.humidity}%, Wind Speed: ${weatherData.wind.speed} km/h.`
                 }),
             });
-            
+
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            
+
             const data = await response.json();
             setAiCompletion(data.completion);
         } catch (error) {
@@ -132,7 +132,7 @@ const WeatherApp = () => {
                         <i className="fa-solid fa-magnifying-glass" onClick={search}></i>
                     </div>
                 </div>
-                {loading ? (<img className="loader" src={loadingGif} alt="loading"/>) : data.notFound ? (<div className="not-found">Incorrect City 🏙️ ☁️</div>) : <><div className="weather">
+                {loading ? (<img className="loader" src={loadingGif} alt="loading" />) : data.notFound ? (<div className="not-found">Incorrect City 🏙️ ☁️</div>) : <><div className="weather">
                     <img src={weatherImage} alt="sunny" />
                     <div className="weather-type">{data.weather ? data.weather[0].main : null}</div>
                     <div className="temp">{data.main ? `${Math.floor(data.main.temp)}°` : null}</div>
@@ -155,7 +155,7 @@ const WeatherApp = () => {
 
             </div>
             <div className="genai" style={{ backgroundImage }}>
-            <h3>Weather Forecast Summary</h3>
+                <h3>Weather Forecast Summary</h3>
                 <p>{aiCompletion}</p>
             </div>
         </div>
