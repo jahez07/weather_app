@@ -6,7 +6,7 @@ import anthropic as ant
 
 app = Flask(__name__)
 
-@app.route('/pi', methods=['GET'])
+@app.route('/data', methods=['GET'])
 def hello_word():
     return render_template('index.html')
 
