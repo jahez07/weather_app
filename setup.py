@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, jsonify
 import anthropic as ant
 from anthropic import HUMAN_PROMPT, AI_PROMPT
 from flask_cors import CORS
