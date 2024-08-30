@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 import anthropic as ant
+from anthropic import HUMAN_PROMPT, AI_PROMPT
 
 #model = tf.keras.models.load_model('/Users/jahezabrahamjohny/Documents/GitHub/CoreAxon/autoencoder_model.h5')
 
