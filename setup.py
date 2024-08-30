@@ -64,7 +64,12 @@ def get_completion():
             model="claude-3-5-sonnet-20240620",
             max_tokens=1000,
             system= sysPrompt,
-            prompt=f"{anthropic.HUMAN_PROMPT} {user_message}{anthropic.AI_PROMPT}",
+            messages=[
+        {
+            "role": "user",
+            "content": [{"type": "text", "text": user_message}],
+        }
+    ],
         )
         
         # Extract the completion text from the response
