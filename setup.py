@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request, redirect, jsonify
-import anthropic as ant
-from anthropic import HUMAN_PROMPT, AI_PROMPT
+from anthropic import HUMAN_PROMPT, AI_PROMPT, Anthropic
 from flask_cors import CORS
+import os
 
-#model = tf.keras.models.load_model('/Users/jahezabrahamjohny/Documents/GitHub/CoreAxon/autoencoder_model.h5')
-
+anthropic_api_key = os.environ["CLAUDE_API_KEY"]
+anthropic = Anthropic(    api_key= anthropic_api_key,)
 
 app = Flask(__name__)
 
