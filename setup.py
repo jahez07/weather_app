@@ -67,13 +67,13 @@ def get_completion():
             messages=[
         {
             "role": "user",
-            "content": [{"type": "text", "text": user_message}],
+            "content": [{"type": "text", "text": "Hey there!"}],
         }
     ],
         )
         
         # Extract the completion text from the response
-        response_text = completion.completion
+        response_text = completion
 
         return jsonify({'completion': response_text})
     except Exception as e:
