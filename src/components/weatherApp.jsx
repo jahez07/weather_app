@@ -6,6 +6,8 @@ import loadingGif from "../assets/images/loading.gif"
 import { useState, useEffect } from "react";
 
 
+
+
 const WeatherApp = () => {
     const [data, setData] = useState({});
     const [location, setLocation] = useState(" ");
@@ -47,24 +49,24 @@ const WeatherApp = () => {
         }
     };
 
-    const fetchAICompletion = async (weatherData) => {
+    const fetchAICompletion = () => {
+        const weatherData = data
         try {
-            const response = await fetch('http://localhost:5000/get_completion', {
+            const response = fetch('http://localhost:5173/get_completion', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    message: `Provide a brief weather forecast summary for ${weatherData.name} based on the following data: Temperature: ${weatherData.main.temp}°C, Weather: ${weatherData.weather[0].main}, Humidity: ${weatherData.main.humidity}%, Wind Speed: ${weatherData.wind.speed} km/h.`
-                }),
+                body: `Provide a brief weather forecast summary for ${weatherData.name} based on the following data: Temperature: ${weatherData.main.temp}°C, Weather: ${weatherData.weather[0].main}, Humidity: ${weatherData.main.humidity}%, Wind Speed: ${weatherData.wind.speed} km/h.`
+    
             });
 
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
 
-            const data = await response.json();
-            setAiCompletion(data.completion);
+            const data = response.json();
+            setAiCompletion(data);
         } catch (error) {
             console.error('Error fetching AI completion:', error);
             setAiCompletion("Unable to fetch AI-generated summary at this time.");
@@ -74,7 +76,7 @@ const WeatherApp = () => {
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
             search();
-            fetchAICompletion();
+            //fetchAICompletion();
         }
     }
 
@@ -156,7 +158,7 @@ const WeatherApp = () => {
             </div>
             <div className="genai" style={{ backgroundImage }}>
                 <h3>Weather Forecast Summary</h3>
-                <p>{aiCompletion}</p>
+                <i className="fa-solid fa-circle-info"></i>
             </div>
         </div>
     );
