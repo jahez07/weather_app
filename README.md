@@ -11,3 +11,7 @@
 1. Vite
 2. React 
 3. openweathermap API
+
+## Future Works
+1. Connect GenAI API (OpenAI / Claude)
+2. Recommendations as per weather conditions. 
