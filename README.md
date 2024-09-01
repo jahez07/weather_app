@@ -6,3 +6,8 @@
 3. Run <br>
 &nbsp; 1. ```npm install``` <br>
 &nbsp; 2. ```npm run dev``` <br>
+
+## Technologies Used
+1. Vite
+2. React 
+3. Opensource weather
