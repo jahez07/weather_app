@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 
 
 
-
 const WeatherApp = () => {
     const [data, setData] = useState({});
     const [location, setLocation] = useState(" ");
@@ -157,8 +156,9 @@ const WeatherApp = () => {
 
             </div>
             <div className="genai" style={{ backgroundImage }}>
-                <h3>Weather Forecast Summary</h3>
+                <h3>Jahez Abraham Johny</h3>
                 <i className="fa-solid fa-circle-info"></i>
+                <div className="genai-body"></div>
             </div>
         </div>
     );
