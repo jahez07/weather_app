@@ -63,7 +63,8 @@ const WeatherApp = () => {
         Rain: rainy,
         Snow: snowy,
         Haze: cloudy,
-        Mist: cloudy
+        Mist: cloudy,
+        Drizzle: rainy
     }
 
     const weatherImage = data.weather ? weatherImages[data.weather[0].main] : null
