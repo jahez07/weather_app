@@ -11,7 +11,6 @@ const WeatherApp = () => {
     const [data, setData] = useState({});
     const [location, setLocation] = useState(" ");
     const [loading, setLoading] = useState(false)
-    const [aiCompletion, setAiCompletion] = useState("");
     const api_key = "f1c67c9a49dd257773513a865b558d9d";
 
 
@@ -48,29 +47,7 @@ const WeatherApp = () => {
         }
     };
 
-    const fetchAICompletion = () => {
-        const weatherData = data
-        try {
-            const response = fetch('http://localhost:5173/get_completion', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: `Provide a brief weather forecast summary for ${weatherData.name} based on the following data: Temperature: ${weatherData.main.temp}°C, Weather: ${weatherData.weather[0].main}, Humidity: ${weatherData.main.humidity}%, Wind Speed: ${weatherData.wind.speed} km/h.`
-    
-            });
 
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-
-            const data = response.json();
-            setAiCompletion(data);
-        } catch (error) {
-            console.error('Error fetching AI completion:', error);
-            setAiCompletion("Unable to fetch AI-generated summary at this time.");
-        }
-    };
 
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
