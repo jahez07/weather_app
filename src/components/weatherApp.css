@@ -60,7 +60,21 @@
     backdrop-filter: blur(2px);
     color: #ffffff;
     font-family: "Poppins", sans-serif;
+    padding: 5rem;
 }
+
+.genai-title {
+    font-size: 3rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.genai-info {
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    line-height: 2rem;
+    margin: 3rem 0;
+}
+
 
  .weather-app {
     width: 36rem;
