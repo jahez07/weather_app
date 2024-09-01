@@ -10,4 +10,4 @@
 ## Technologies Used
 1. Vite
 2. React 
-3. Opensource weather
+3. openweathermap API
