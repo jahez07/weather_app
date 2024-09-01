@@ -156,9 +156,11 @@ const WeatherApp = () => {
 
             </div>
             <div className="genai" style={{ backgroundImage }}>
+                <div className="profile">
                 <h3>Jahez Abraham Johny</h3>
+                <h4 className="role">AI Software Engineer</h4>
+                </div>
                 <i className="fa-solid fa-circle-info"></i>
-                <div className="genai-body"></div>
             </div>
         </div>
     );
