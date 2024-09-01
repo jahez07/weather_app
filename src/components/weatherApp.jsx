@@ -154,11 +154,6 @@ const WeatherApp = () => {
                             <div className="data">{data.wind ? data.wind.speed : null} km/h</div>
                         </div>
                     </div></>}
-                    <div className="genai-body">
-                    <h1 className="genai-title">
-                    PMAccelerator</h1>
-                    <p className="genai-info">The Product Manager Accelerator Program is designed to support PM professionals through every stage of their career. From students looking for entry-level jobs to Directors looking to take on a leadership role, our program has helped over hundreds of students fulfill their career aspirations.</p>
-                    </div>
 
             </div>
             <div className="genai" style={{ backgroundImage }}>
@@ -166,8 +161,10 @@ const WeatherApp = () => {
                 <h3>Jahez Abraham Johny</h3>
                 <h4 className="role">AI Software Engineer</h4>
                 </div>
-                <i className="fa-solid fa-circle-info"></i>
-                
+                <i className="disc fa-solid fa-circle-info"></i>
+                <div className="genai-body">
+                    <p className="genai-info">The Product Manager Accelerator Program is designed to support PM professionals through every stage of their career.</p>
+                    </div>
             </div>
         </div>
     );
