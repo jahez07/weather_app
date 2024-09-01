@@ -15,3 +15,5 @@
 ## Future Works
 1. Connect GenAI API (OpenAI / Claude)
 2. Recommendations as per weather conditions. 
+
+![alt text](image.png)
